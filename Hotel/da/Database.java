@@ -1,4 +1,4 @@
-import java.io.UnsupportedEncodingException;
+﻿import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
@@ -34,7 +34,7 @@ public class Database
 		try   
 		{     
 			dbConn=DriverManager.getConnection(dbURL,userName,userPwd);     
-			System.out.println("connection sucess");
+			System.out.println("connection fail");
 			//testBulkInsert();
 		}
 		catch(Exception e)   
