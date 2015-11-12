@@ -34,7 +34,7 @@ public class Database
 		try   
 		{     
 			dbConn=DriverManager.getConnection(dbURL,userName,userPwd);     
-			System.out.println("连接数据库成功");
+			System.out.println("nonono");
 			//testBulkInsert();
 		}
 		catch(Exception e)   
