@@ -3,9 +3,7 @@ public class Room {
 	private String Room_ID,Room_Num,Type_ID,Status;
 	private int Seleted;
 
-	public String getRoom_ID() {
-		return Room_ID;
-	}
+
 
 	public void setRoom_ID(String room_ID) {
 		Room_ID = room_ID;
