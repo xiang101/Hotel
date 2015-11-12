@@ -64,18 +64,18 @@ public class Controller
 	public Room getRoomStatus(String RoomNum)
 	{
 		room = db.getRoomStatus(RoomNum);
-//		System.out.println("ÎÒÄÃ¹ıroom statusÁË!");
-//		System.out.println("ÎÒµÄRoomNum ÊÇ "+RoomNum);
-//		System.out.println("ÎÒµÄRoomID ÊÇ "+room.getRoom_ID());
+//		System.out.println("æˆ‘æ‹¿è¿‡room statusäº†!");
+//		System.out.println("æˆ‘çš„RoomNum æ˜¯ "+RoomNum);
+//		System.out.println("æˆ‘çš„RoomID æ˜¯ "+room.getRoom_ID());
 		return room;
 	}
 	
 	public void setRoomStatus(String status, String roomID)
 	{
-		db.setRoomStatus(status, roomID);
+		db.setRoomStatus(status, roomID);test edit here
 	}
 	
-	public void saveSecRoom(Room room,int selection)
+	public void saveSecRoom(Room room,int selection)also here
 	{
 		db.saveSecRoom(room.getRoom_ID(),selection);
 	}
@@ -184,7 +184,7 @@ public class Controller
 	{
 		//db.clearRomStatus();
 		revD = new RevDetail();
-		if(db.getSameRev(room.getRoom_ID(),revD.dateCon(new Date()),i)==0)	//Çå³ı²»±ØÒªµÄÑ¡Ôñ
+		if(db.getSameRev(room.getRoom_ID(),revD.dateCon(new Date()),i)==0)	//æ¸…é™¤ä¸å¿…è¦çš„é€‰æ‹©
 		{
 			db.clearRomSelected();
 		}
@@ -219,7 +219,7 @@ public class Controller
 	}
 	
 	public String getRoomRev(Room room) {
-		revD = new RevDetail();   //ÄÃ×ª»»dateµÄ·½·¨¶øÒÑ
+		revD = new RevDetail();   //æ‹¿è½¬æ¢dateçš„æ–¹æ³•è€Œå·²
 		return db.getRoomRev(room.getRoom_ID(),revD.dateCon(new Date()));
 	}
 	
@@ -320,7 +320,7 @@ public class Controller
 		mf.add(jp);
 	}
 	
-	public void BackPanel(JComponent jc)	//±Ü¿ªstack
+	public void BackPanel(JComponent jc)	//é¿å¼€stack
 	{
 		bp = new BackPanel(this);
 		UpdatePanel(bp);
