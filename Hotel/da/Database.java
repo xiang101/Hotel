@@ -34,13 +34,13 @@ public class Database
 		try   
 		{     
 			dbConn=DriverManager.getConnection(dbURL,userName,userPwd);     
-			System.out.println("Á¬½ÓÊı¾İ¿â³É¹¦");
+			System.out.println("connection sucess");
 			//testBulkInsert();
 		}
 		catch(Exception e)   
 		{     
 			e.printStackTrace();     
-			System.out.println("Á¬½ÓÊ§°Ü");   
+			System.out.println("è¿æ¥å¤±è´¥");   
 		}
 	}
 	
@@ -838,7 +838,7 @@ public class Database
 	
 	public int getSameRev(String room_ID,String date, int i) 
 	{
-		int rowNum=0;	//¼ÇÂ¼ updated ĞĞÊı
+		int rowNum=0;	//è®°å½• updated è¡Œæ•°
 		setQuery("update Room set Selected = ? from Room join Room_Rev on Room.Room_ID = Room_Rev.Room_ID "
 				+ "where Room_Rev.Rev_ID = "
 				+ "(select Rev_ID from Room_Rev where Room_ID = ? "
@@ -985,7 +985,7 @@ public class Database
 		String revID = null;
 		setQuery("select Rev_ID from Room_Rev where Room_ID = ? and (Start_Date<= ? and End_Date>?)");
 		try 
-		{	//ÕâÀï·Ç³£×¢ÖØÈÕÆÚÅĞ¶Ï
+		{	//è¿™é‡Œéå¸¸æ³¨é‡æ—¥æœŸåˆ¤æ–­
 			statement = dbConn.prepareStatement(query);
 			int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 			
@@ -1003,7 +1003,7 @@ public class Database
 			
 	        while(rs.next())
 	        {
-	        	revID=rs.getString(1);	//·Å×Å¸øËüÄÃµ½×îºóÒ»´Î
+	        	revID=rs.getString(1);	//æ”¾ç€ç»™å®ƒæ‹¿åˆ°æœ€åä¸€æ¬¡
 	        }
 			CloseConn();
 		}
